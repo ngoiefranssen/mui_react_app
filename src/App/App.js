@@ -1,14 +1,21 @@
 import './App.css';
-import { Button } from '@mui/material';
-import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import Sidebar from '../Components/Sidebar';
+import Feed from '../Components/Feed';
+import Rightbar from '../Components/Rightbar';
+import { Box, Stack } from '@mui/material';
+import Navbar from '../Components/Navbar';
 
 function App() {
   return (
-    <div>
-      <Button variant="text">Text</Button>
-      <Button startIcon={<SettingsRoundedIcon />} variant="contained" size='small' color='success'>Contained</Button >
-      <Button variant="outlined">Outlined</Button>
-    </div>
+    <Box>
+      <Navbar />
+      <Stack direction='row' spacing={2} justifyContent='space-between'>
+        <Sidebar />
+        <Feed />
+        <Rightbar />
+      </Stack>
+
+    </Box>
   );
 }
 
