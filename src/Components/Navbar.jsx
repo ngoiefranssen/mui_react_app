@@ -5,13 +5,15 @@ import {
   Badge, 
   Box, 
   InputBase, 
+  Menu, 
+  MenuItem, 
   styled, 
   Toolbar, 
   Typography 
 } from '@mui/material'
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import MailIcon from '@mui/icons-material/Mail';
-import React from 'react'
+import React, { useState } from 'react'
 
 const ToolbarStyled = styled(Toolbar)({
   display: 'flex',
@@ -44,6 +46,9 @@ const UserBox = styled(Box)(({ theme }) => ({
 }));
 
 const Navbar = () => {
+
+  const [open, setOpen] = useState(false)
+
   return (
     <AppBar position='sticky'>
       <ToolbarStyled>
@@ -68,9 +73,10 @@ const Navbar = () => {
           <Avatar
             sx={{ width: 30, height: 30 }}
             src='https://www.w3schools.com/howto/img_avatar2.png'
+            onClick={(e) => setOpen(true)}
           />
         </Icons>
-        <UserBox>
+        <UserBox onClick={(e) => setOpen(true)}>
           <Avatar
               sx={{ width: 30, height: 30 }}
               src='https://www.w3schools.com/howto/img_avatar2.png'
@@ -78,6 +84,23 @@ const Navbar = () => {
           <Typography variant='span'>Julia</Typography>
         </UserBox>
       </ToolbarStyled>
+      <Menu
+        id="fade-menu"
+        anchorOrigin={{
+          vertical:'top',
+          horizontal:'right'
+        }}
+        open={open}
+        onClose={(e) => setOpen(false)}
+        transformOrigin={{
+          vertical:'top',
+          horizontal:'right'
+        }}
+      >
+        <MenuItem>Profile</MenuItem>
+        <MenuItem>My account</MenuItem>
+        <MenuItem>Logout</MenuItem>
+      </Menu>
     </AppBar>
   )
 }
