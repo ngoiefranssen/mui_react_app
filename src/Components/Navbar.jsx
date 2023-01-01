@@ -27,6 +27,7 @@ const Search = styled('div')(({ theme }) => ({
 
 const Icons = styled(Box)(({ theme }) => ({
   display: 'flex',
+  gap: '20px',
 }));
 
 const Navbar = () => {
@@ -40,10 +41,11 @@ const Navbar = () => {
             MUI APP
           </Typography>
           <Pets sx={{ display: { xs: 'block', sm: 'none' } }} />
-          <Search>search</Search>
+          <Search>
+            <InputBase placeholder='Search....' />
+          </Search>
         {/* </Toolbar> */}
         <Icons>
-          <InputBase placeholder='Search....' />
           <Badge badgeContent={4} color="error">
             <MailIcon  />
           </Badge>
