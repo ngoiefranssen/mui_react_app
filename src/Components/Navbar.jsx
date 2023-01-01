@@ -1,6 +1,7 @@
 import { Pets } from '@mui/icons-material';
-import { AppBar, Box, InputBase, styled, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Box, InputBase, styled, Toolbar, Typography } from '@mui/material'
 import { borderRadius } from '@mui/system';
+import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
 import React from 'react'
 
 const ToolbarStyled = styled(Toolbar)({
@@ -16,14 +17,14 @@ const Search = styled('div')(({ theme }) => ({
 }));
 
 const Icons = styled(Box)(({ theme }) => ({
-  // backgroundColor: 'white'
+  display: 'flex',
 }));
 
 const Navbar = () => {
   return (
     <AppBar position='sticky'>
       <ToolbarStyled>
-        <Toolbar>
+        {/* <Toolbar> */}
           <Typography
             variant='h6'
             sx={{ display: { xs: 'none', sm: 'block' } }}>
@@ -31,11 +32,19 @@ const Navbar = () => {
           </Typography>
           <Pets sx={{ display: { xs: 'block', sm: 'none' } }} />
           <Search>search</Search>
-        </Toolbar>
-        <Icons><InputBase placeholder='Search....' /></Icons>
-        <Badge badgeContent={4} color="error">
-          <MailIcon  />
-        </Badge>
+        {/* </Toolbar> */}
+        <Icons>
+          <InputBase placeholder='Search....' />
+          <Badge badgeContent={4} color="error">
+            <MailIcon  />
+          </Badge>
+          <Badge badgeContent={2} color="error">
+            <CircleNotificationsIcon  />
+          </Badge>
+          <Avatar
+            sx={{ width: 30, height: 30 }}
+            src='https://www.w3schools.com/howto/img_avatar2.png' />
+        </Icons>  
       </ToolbarStyled>
     </AppBar>
   )
