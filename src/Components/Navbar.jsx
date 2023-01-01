@@ -81,7 +81,7 @@ const Navbar = () => {
               sx={{ width: 30, height: 30 }}
               src='https://www.w3schools.com/howto/img_avatar2.png'
           />
-          <Typography variant='span'>Julia</Typography>
+          <Typography variant='span' fontWeight={500}>Julia</Typography>
         </UserBox>
       </ToolbarStyled>
       <Menu

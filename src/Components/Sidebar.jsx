@@ -9,7 +9,7 @@ import BookmarkIcon from '@mui/icons-material/Bookmark';
 import PersonIcon from '@mui/icons-material/Person';
 import React from 'react'
 
-const Sidebar = () => {
+const Sidebar = ({mode, setMode}) => {
   return (
     <Box
       flex={1}
@@ -78,13 +78,13 @@ const Sidebar = () => {
                 <ListItemIcon>
                   <ModeNightIcon />
                 </ListItemIcon>
-                <Switch />
+                <Switch onChange={(e) => setMode(mode === 'light' ? 'dark' : 'light')}/>
               </ListItemButton>
             </ListItem>
           </List>
         </Box>
     </Box>
-  )
+  );
 };
 
 export default Sidebar

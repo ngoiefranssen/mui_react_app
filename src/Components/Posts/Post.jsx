@@ -7,7 +7,7 @@ import {
     CardActions,
     Avatar,
     IconButton,
-    Typography, 
+    Typography,
 } from '@mui/material';
 import ShareIcon from '@mui/icons-material/Share';
 import MoreVertIcon from '@mui/icons-material/MoreVert';
@@ -35,7 +35,7 @@ const Post = () => {
             <CardMedia
                 component="img"
                 height="20%"
-                image="https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.chassimages.com%2F&psig=AOvVaw0gnprSflX9fPNvQA1csTxJ&ust=1672655159255000&source=images&cd=vfe&ved=0CA8QjRxqFwoTCPDDwpaUpvwCFQAAAAAdAAAAABAE"
+                image="https://images.unsplash.com/photo-1551963831-b3b1ca40c98e"
                 alt="Paella dish"
             />
             <CardContent>
