@@ -1,7 +1,16 @@
 import { Pets } from '@mui/icons-material';
-import { AppBar, Avatar, Box, InputBase, styled, Toolbar, Typography } from '@mui/material'
-import { borderRadius } from '@mui/system';
+import { 
+  AppBar, 
+  Avatar, 
+  Badge, 
+  Box, 
+  InputBase, 
+  styled, 
+  Toolbar, 
+  Typography 
+} from '@mui/material'
 import CircleNotificationsIcon from '@mui/icons-material/CircleNotifications';
+import MailIcon from '@mui/icons-material/Mail';
 import React from 'react'
 
 const ToolbarStyled = styled(Toolbar)({
