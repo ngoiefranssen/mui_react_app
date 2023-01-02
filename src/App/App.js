@@ -6,6 +6,8 @@ import { Box, createTheme, Stack } from '@mui/material';
 import Navbar from '../Components/Navbar';
 import Add from '../Components/Add';
 import { useState } from 'react';
+import { ThemeProvider } from '@mui/material/styles';
+
 
 function App() {
 
